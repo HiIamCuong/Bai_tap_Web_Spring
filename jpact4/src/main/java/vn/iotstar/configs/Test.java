@@ -11,19 +11,17 @@ public class Test {
 
 		EntityTransaction trans = enma.getTransaction();
 
-		Category cate = new Category();
+		//Category cate = new Category();
 
-		cate.setCategoryname("Iphone");
+		//cate.setCategoryname("Iphone");
 
-		cate.setImages("abc.jpg");
+		//cate.setImages("abc.jpg");
 
-		cate.setStatus(1);
+		//cate.setStatus(1);
 
 		try {
 
 			trans.begin();
-
-			enma.persist(cate);
 			
 			trans.commit();
 
