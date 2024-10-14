@@ -52,7 +52,7 @@ public class VideoController extends HttpServlet{
 		}
 		else if (url.contains("/admin/video/edit")) {
 
-			int id = Integer.parseInt(req.getParameter("vidid"));
+			int id = Integer.parseInt(req.getParameter("id"));
 
 			Video video = vidService.findById(id);
 
@@ -63,7 +63,7 @@ public class VideoController extends HttpServlet{
 		}
 		else if(url.contains("/admin/video/delete")){
 
-			int id = Integer.parseInt(req.getParameter("vidid"));
+			int id = Integer.parseInt(req.getParameter("id"));
 
 			try {
 
@@ -79,7 +79,7 @@ public class VideoController extends HttpServlet{
 
 			// chuyển trang
 
-			resp.sendRedirect(req.getContextPath() + "/admin/categories");
+			resp.sendRedirect(req.getContextPath() + "/admin/videos");
 
 		}
 	}
@@ -177,9 +177,13 @@ public class VideoController extends HttpServlet{
 
 			String vidtitle = req.getParameter("vidtitle");
 
-			int active = Integer.parseInt(req.getParameter("action"));
+			int active = Integer.parseInt(req.getParameter("active"));
 
 			String poster = req.getParameter("poster");
+			
+			String description=req.getParameter("viddescription");
+			
+			int views=Integer.parseInt(req.getParameter("vidviews"));
 
 			// đưa dữ liệu vào model
 
@@ -190,6 +194,10 @@ public class VideoController extends HttpServlet{
 			video.setTitle(vidtitle);
 
 			video.setActive(active);
+			
+			video.setDescription(description);
+			
+			video.setViews(views);
 
 			String fname = "";
 
@@ -203,7 +211,7 @@ public class VideoController extends HttpServlet{
 
 			try {
 
-				Part part = req.getPart("images1");
+				Part part = req.getPart("poster1");
 
 				if (part.getSize() > 0) {
 
@@ -244,7 +252,6 @@ public class VideoController extends HttpServlet{
 			}
 
 			// đưa model vào phương thức insert
-
 			vidService.update(video);
 
 			// chuyển trang

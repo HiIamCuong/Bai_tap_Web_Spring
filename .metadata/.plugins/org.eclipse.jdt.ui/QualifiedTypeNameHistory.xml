@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.apache.commons.io.IOUtils"/>
-    <fullyQualifiedTypeName name="java.lang.InternalError"/>
     <fullyQualifiedTypeName name="vn.iotstar.ultis.Constant.Path"/>
     <fullyQualifiedTypeName name="vn.iotstar.models.Category"/>
     <fullyQualifiedTypeName name="vn.iotstar.service.UserService"/>
@@ -13,7 +11,6 @@
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
     <fullyQualifiedTypeName name="jakarta.persistence.OneToMany"/>
-    <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
     <fullyQualifiedTypeName name="jakarta.persistence.PersistenceContext"/>
@@ -31,11 +28,9 @@
     <fullyQualifiedTypeName name="javax.management.Query"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Query"/>
     <fullyQualifiedTypeName name="vn.iotstar.dao.CategoryDaoImpl"/>
-    <fullyQualifiedTypeName name="vn.iotstar.dao.CategoryDao"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.MultipartConfig"/>
-    <fullyQualifiedTypeName name="vn.iotstar.entity.Category"/>
     <fullyQualifiedTypeName name="vn.iotstar.service.CategoryService"/>
     <fullyQualifiedTypeName name="vn.iotstar.service.CategoryServiceImpl"/>
     <fullyQualifiedTypeName name="vn.iotstar.ultis.Constant"/>
@@ -54,10 +49,15 @@
     <fullyQualifiedTypeName name="vn.iotstar.Controller.VideoController"/>
     <fullyQualifiedTypeName name="vn.iotstar.service.VideoServiceImpl"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="vn.iotstar.entity.Video"/>
     <fullyQualifiedTypeName name="java.io.Console"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="vn.iotstar.service.VideoService"/>
     <fullyQualifiedTypeName name="vn.iotstar.dao.VideoDaoImpl"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="vn.iotstar.dao.CategoryDao"/>
+    <fullyQualifiedTypeName name="vn.iotstar.entity.Video"/>
+    <fullyQualifiedTypeName name="vn.iotstar.entity.Category"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="vn.iotstar.entity.User"/>
+    <fullyQualifiedTypeName name="vn.iotstar.dao.UserDao"/>
 </qualifiedTypeNameHistroy>

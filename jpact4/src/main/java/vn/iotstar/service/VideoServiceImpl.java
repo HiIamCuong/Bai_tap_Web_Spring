@@ -12,13 +12,25 @@ public class VideoServiceImpl implements VideoService{
 	public VideoDao vidDao = new VideoDaoImpl();
 	@Override
 	public void delete(int vidid) throws Exception {
-		// TODO Auto-generated method stub
+		try {
+
+			vidDao.delete(vidid);
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		}
 		
 	}
 
 	@Override
 	public void update(Video video) {
-		// TODO Auto-generated method stub
+		if (video != null) {
+
+			vidDao.update(video);
+
+		}
 		
 	}
 
@@ -28,7 +40,6 @@ public class VideoServiceImpl implements VideoService{
 
 		if (videoinsert == null) {
 
-			System.out.print("toi duoc day");
 			vidDao.insert(video);
 
 		}

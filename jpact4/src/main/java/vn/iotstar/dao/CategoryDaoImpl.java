@@ -7,6 +7,8 @@ import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
 import vn.iotstar.configs.JPAConfig;
 import vn.iotstar.entity.Category;
+import vn.iotstar.entity.Video;
+
 import java.util.List;
 
 
@@ -81,7 +83,17 @@ public class CategoryDaoImpl implements CategoryDao{
 
 			trans.begin();
 
-			enma.remove(cateid);
+			Category category = enma.find(Category.class, cateid);
+
+			if (category != null) {
+
+				enma.remove(category);
+
+			} else {
+
+				throw new Exception("Không tìm thấy");
+
+			}
 
 			trans.commit();
 

@@ -7,6 +7,7 @@ import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
 import vn.iotstar.configs.JPAConfig;
+import vn.iotstar.entity.Category;
 import vn.iotstar.entity.Video;
 
 public class VideoDaoImpl implements VideoDao {
@@ -19,7 +20,7 @@ public class VideoDaoImpl implements VideoDao {
 		try {
 
 			trans.begin();
-			
+
 			enma.persist(vid);
 
 			trans.commit();
@@ -39,7 +40,6 @@ public class VideoDaoImpl implements VideoDao {
 		}
 	}
 
-	
 	@Override
 	public void update(Video vid) {
 		EntityManager enma = JPAConfig.getEntityManager();
@@ -79,7 +79,17 @@ public class VideoDaoImpl implements VideoDao {
 
 			trans.begin();
 
-			enma.remove(vidid);
+			Video video = enma.find(Video.class, vidid);
+
+			if (video != null) {
+
+				enma.remove(video);
+
+			} else {
+
+				throw new Exception("Không tìm thấy");
+
+			}
 
 			trans.commit();
 
@@ -109,7 +119,6 @@ public class VideoDaoImpl implements VideoDao {
 
 	}
 
-
 	@Override
 	public List<Video> findAll() {
 
@@ -126,7 +135,7 @@ public class VideoDaoImpl implements VideoDao {
 
 		EntityManager enma = JPAConfig.getEntityManager();
 
-		TypedQuery<Video> query = enma.createNamedQuery("Category.findAll", Video.class);
+		TypedQuery<Video> query = enma.createNamedQuery("Video.findAll", Video.class);
 
 		query.setFirstResult(page * pagesize);
 
@@ -135,7 +144,6 @@ public class VideoDaoImpl implements VideoDao {
 		return query.getResultList();
 
 	}
-
 
 	@Override
 	public int count() {
