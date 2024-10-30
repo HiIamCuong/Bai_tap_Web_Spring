@@ -1,12 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="jakarta.tags.core"%>
-<a href="/admin/categories/add">Add category</a>
-<!-- Hiển thông báo -->
-<c:if test="${message != null}">
-	<i>${message}</i>
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="jakarta.tags.core"%>
+<a href="/admin/categories/add">Add Category</a>
+
+<c:if test="${message!=null}">
+	${message}
 </c:if>
-<!-- Hêt thông báo -->
+
+<table>
+	<tr>
+		<th>STT</th>
+		<th>Images</th>
+		<th>Categoryname</th>
+		<th>Status</th>
+		<th>Action</th>
+	</tr>
+	<c:forEach items="${list}" var="cate" varStatus="stt">
+		<tr>
+			<td>${stt.index+1}</td>
+			<td>${cate.images }</td>
+			<td>${cate.name}</td>
+			<td>${cate.status}</td>
+			<td>
+				<a href="/admin/categories/edit/${cate.id}">Edit</a>
+				<a href="/admin/categories/delete/${cate.id}">Delete</a>
+			</td>
+		</tr>
+	</c:forEach>
+</table>
 <form action="/admin/categories/searchpaginated">
 	<input type="text" name="name" id="name"
 		placeholder="Nhập từ khóa để tìm" />
