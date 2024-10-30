@@ -35,9 +35,9 @@ public class User implements Serializable{
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	@Column(name = "CategoryId")
+	@Column(name = "userId")
 
-	private int categoryid;
+	private int userid;
 	
 	@Column(name = "email")
 	
