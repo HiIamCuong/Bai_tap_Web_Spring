@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Admin Page</title>
+    <!-- Add any CSS or JS links here -->
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="row">
+      <div class="col">
+        <div th:replace="~{admin/fragments/header::header}"></div> <!-- Load the header fragment -->
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+      <!-- Uncommented Navigation Section 
+      <nav class="row">
+        <div class="col">
+          <div th:replace="~{admin/fragments/nav::nav}"></div>
+        </div>
+      </nav>
+      -->
+
+      <section class="row mt-4">
+        <div class="col mt-5 mb-5">
+          <div layout:fragment="content"></div> <!-- Placeholder for dynamic content -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="row">
+      <div class="col">
+        <div th:replace="~{admin/fragments/footer::footer}"></div> <!-- Load the footer fragment -->
+      </div>
+    </footer>
+  </body>
+</html>

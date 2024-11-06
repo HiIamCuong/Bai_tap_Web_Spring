@@ -42,6 +42,11 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\cuong python\mon hoc\CONG NGHE PHAN MEM\issue\Ergo"/>
+			<item value="D:\cuong python\mon hoc\CONG NGHE PHAN MEM\pull\Ergo"/>
+			<item value="D:\cuong python\mon hoc\CONG NGHE PHAN MEM\pull"/>
+			<item value="D:\WEB\Ergo"/>
+			<item value="D:\WEB\springthymeleaf"/>
 			<item value="D:\WEB\testspring"/>
 		</list>
 	</section>

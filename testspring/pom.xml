@@ -79,7 +79,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
 		<!--
 		https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
 		<dependency>
